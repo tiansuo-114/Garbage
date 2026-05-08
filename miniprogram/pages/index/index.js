@@ -41,7 +41,7 @@ Page({
     return {
       title: "智能分类垃圾",
       imageUrl: "https://6c61-laji-bopv4-1259505195.tcb.qcloud.la/laji.png?sign=7c8d38e435eb3104fcf5933ebff667f5&t=1561904613",
-      path: "pages/ai/index"
+      path: "pages/index/index"
     }
   }
 })

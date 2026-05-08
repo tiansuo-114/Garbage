@@ -67,7 +67,7 @@ Page({
           icon: "none"
         })
         wx.switchTab({
-          url: '/pages/ai/index',
+          url: '/pages/index/index',
         })
       },
       fail: res => {

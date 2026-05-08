@@ -21,7 +21,7 @@
   "tabBar": {
     "list": [
       {
-        "pagePath": "pages/ai/index",
+        "pagePath": "pages/index/index",
         "text": "识别",
         "iconPath": "images/icon_ai_default.png",
         "selectedIconPath": "images/icon_ai.png"
