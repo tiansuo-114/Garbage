@@ -1,0 +1,68 @@
+<!-- 分类指南页面 -->
+<view class="guide-container">
+  <!-- 页面标题 -->
+  <view class="page-header">
+    <text class="page-title">垃圾分类指南</text>
+    <text class="page-subtitle">学会正确分类，保护美好环境</text>
+  </view>
+
+  <!-- Tab 切换栏 -->
+  <view class="tab-bar">
+    <view 
+      class="tab-item {{currentTab == index ? 'tab-active' : ''}}" 
+      wx:for="{{categories}}" 
+      wx:key="name"
+      data-index="{{index}}" 
+      bindtap="switchTab"
+    >
+      <image class="tab-icon" src="{{item.icon}}"></image>
+      <text class="tab-text" style="color: {{currentTab == index ? item.color : '#999'}}">{{item.name}}</text>
+      <view class="tab-indicator" wx:if="{{currentTab == index}}" style="background-color: {{item.color}}"></view>
+    </view>
+  </view>
+
+  <!-- 当前分类详情 -->
+  <view class="category-detail" wx:for="{{categories}}" wx:key="name" wx:if="{{currentTab == index}}">
+    <!-- 分类头部卡片 -->
+    <view class="detail-card" style="background-color: {{item.bgColor}}; border-left: 8rpx solid {{item.color}}">
+      <view class="card-header">
+        <image class="card-icon" src="{{item.icon}}"></image>
+        <view class="card-info">
+          <text class="card-name" style="color: {{item.color}}">{{item.name}}</text>
+          <text class="card-desc">{{item.desc}}</text>
+        </view>
+      </view>
+      <view class="card-items">
+        <text class="items-label">常见物品：</text>
+        <text class="items-text">{{item.items}}</text>
+      </view>
+    </view>
+
+    <!-- 投放技巧 -->
+    <view class="section">
+      <view class="section-title">
+        <text class="section-icon">💡</text>
+        <text>判断技巧与投放要点</text>
+      </view>
+      <view class="tip-list">
+        <view class="tip-item" wx:for="{{item.tips}}" wx:for-item="tip" wx:key="*this">
+          <text class="tip-dot" style="background-color: {{categories[currentTab].color}}"></text>
+          <text class="tip-text">{{tip}}</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 常见误区 -->
+    <view class="section">
+      <view class="section-title">
+        <text class="section-icon">⚠️</text>
+        <text>常见误区</text>
+      </view>
+      <view class="mistake-list">
+        <view class="mistake-item" wx:for="{{item.mistakes}}" wx:for-item="mistake" wx:key="*this">
+          <text class="mistake-text">{{mistake}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
