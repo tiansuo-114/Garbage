@@ -7,6 +7,7 @@
     "pages/android/qa",
     "pages/index/index",
     "pages/sort/sort",
+    "pages/guide/guide",
     "pages/result/gan",
     "pages/result/list",
     "pages/result/commit"
@@ -29,6 +30,12 @@
       {
         "pagePath": "pages/sort/sort",
         "text": "分类",
+        "iconPath": "images/icon_sort_default.png",
+        "selectedIconPath": "images/icon_sort.png"
+      },
+      {
+        "pagePath": "pages/guide/guide",
+        "text": "指南",
         "iconPath": "images/icon_sort_default.png",
         "selectedIconPath": "images/icon_sort.png"
       }
