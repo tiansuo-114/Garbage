@@ -31,9 +31,14 @@
     "showES6CompileOption": false,
     "disableUseStrict": false,
     "useCompilerPlugins": false,
-    "minifyWXML": true
+    "minifyWXML": true,
+    "compileWorklet": false,
+    "localPlugins": false,
+    "condition": false,
+    "swc": false,
+    "disableSWC": true
   },
-  "appid": "wxd6d20b5732ff7bb3",
+  "appid": "touristappid",
   "projectname": "Garbage",
   "libVersion": "2.9.3",
   "simulatorType": "wechat",

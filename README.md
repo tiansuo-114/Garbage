@@ -1,56 +1,42 @@
-# 垃圾分类小程序
-## 小程序使用到的云开发内容
-> 不了解小程序云开发请访问[文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
+# 智能垃圾分类小程序 — 腾讯云训练项目
 
-云函数，云数据库：
-- 数据库：存储四种垃圾分类的相关垃圾数据， 创建表commit,sort，product。把sort.json 和product.csv 导入云数据库即可
-- 云函数：获取百度识别库的accessToken
-[百度AI识别库地址](http://ai.baidu.com/docs#/ImageClassify-API/ebc492b1)
-[QQ AI地址](https://ai.qq.com/)
+> 原项目地址：https://github.com/qi19901212/Garbage
 
-## 需要修改为自己的key 
-1. 小程序key 在文件project.config.json->appid 记住创建小程序的时候选择云开发
-2. 百度key 主要做拍照识别的cloudfunctions->baiduAccessToken->index->apiKey和secretKey
-此处替换为：API Key 和 Secret Key
-3. 智能询问采用ai.qq 的智能闲聊接口 key在pages->android->qa->app_id和appKey 
+## 选择完成的基础题
 
-## 云开发管理系统
-此管理系统用来管理这个小程序的数据，这样子我们彻底不需要服务器了。
-[GarbageAdmin](https://github.com/qi19901212/GarbageAdmin)
-方便管理小程序云的数据
+### 基础题1：扩充垃圾数据库
 
-## 常见错误
-1. 没有自己部署云函数
-2. 数据库没有给与相应的权限，最好给最大权限
-3. 需要的key 配置错误。
-4. 没有创建数据库名称
+新增 50 条校园特色垃圾条目（ID 2536–2585），覆盖四种分类：
 
-## 最常见错误（遇到的人最多）
-![错误](https://6c61-laji-bopv4-1259505195.tcb.qcloud.la/11111111111.png?sign=27ab0e0c9ea4f776c7da31155148feb8&t=1582555839
-)
-![解决办法](https://6c61-laji-bopv4-1259505195.tcb.qcloud.la/2222222.png?sign=f40dcc35a1057378883bf0fb99c17c16&t=1582556012)
+| 分类 | 数量 | 示例 |
+|------|------|------|
+| 可回收物 | 14 条 | 废旧教科书、废旧校园卡、废旧鼠标/键盘 |
+| 湿垃圾 | 13 条 | 食堂剩饭剩菜、过期酸奶、吃剩的关东煮 |
+| 有害垃圾 | 10 条 | 实验室废液、废弃化学试剂瓶、废弃水银体温计 |
+| 干垃圾 | 13 条 | 用过的餐巾纸、一次性餐盒/筷子、烟蒂 |
 
-## 直接扫码体验
-![垃圾分类智能工具](https://6c61-laji-bopv4-1259505195.tcb.qcloud.la/%E4%B8%8B%E8%BD%BD.png?sign=9ac1d35da98fdf1ff62950948e267f05&t=1562463997)
-## 其他兄弟的垃圾分类小程序
-![一键查垃圾分类](https://github.com/qi19901212/Garbage/blob/master/miniprogram/qr/laji1.jpg)
-![222](https://github.com/qi19901212/Garbage/blob/master/miniprogram/qr/222222.jpg)
-![333](https://github.com/qi19901212/Garbage/blob/master/miniprogram/qr/3333333.jpg)
-![444](https://github.com/qi19901212/Garbage/blob/master/miniprogram/qr/44444.jpg)
-![555](https://github.com/qi19901212/Garbage/blob/master/miniprogram/qr/55555.jpg)
-![666](https://github.com/qi19901212/Garbage/blob/master/miniprogram/qr/66666.jpg)
+同时编写了 `batchImport` 云函数用于批量导入云数据库。
 
+### 基础题2：新增"分类指南"页面
 
-## 有什么问题可以访问我的群
-https://gitee.com/sunqi/personal-contact-information
-## 垃圾库 新增
-https://pan.baidu.com/s/1PM7ZUB5-bVyktVbSefYDZg?errno=0&errmsg=Auth%20Login%20Sucess&&bduss=&ssnerror=0&traceid=
+新增 `pages/guide/guide` 页面，通过底部 tabBar「指南」入口进入：
 
+- Tab 切换查看四类垃圾
+- 每类垃圾的判断技巧与投放要点
+- 每类垃圾 4 个常见误区（如"大骨头不是湿垃圾"）
 
-## 转载问题
-转载请署名作者，不得作为商业用途，禁止售卖。
-[协议](https://github.com/qi19901212/Garbage/blob/master/LICENSE)
+## 运行方法
 
- 
+1. 下载 [微信开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html)
+2. 克隆本仓库：`git clone <仓库地址>`
+3. 微信开发者工具 → 导入项目 → 选择项目根目录
+4. AppID 使用测试号即可
+5. 如需云功能，开通云开发环境后部署 `cloudfunctions` 下的云函数
 
+## 录屏链接
 
+[点击下载演示录屏 demo.mp4](https://github.com/tiansuo-114/Garbage/releases/download/v1.0.0/demo.mp4)
+
+## 自我总结
+
+选择了垃圾分类项目完成两道基础题。基础题1围绕校园场景新增了50条覆盖实验室、食堂、教室、宿舍的废弃物数据。基础题2新建了分类指南页面，用Tab切换展示四类垃圾的判断技巧和常见误区。开发中遇到的主要问题：原项目存在路径引用错误（pages/ai/应为pages/index/）和pages数组重复条目，排查并统一修复后项目才能正常运行。

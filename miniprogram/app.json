@@ -5,8 +5,8 @@
     "pages/index/search",
     "pages/index/filter/filter",
     "pages/android/qa",
-    "pages/index/index",
     "pages/sort/sort",
+    "pages/guide/guide",
     "pages/result/gan",
     "pages/result/list",
     "pages/result/commit"
@@ -21,7 +21,7 @@
   "tabBar": {
     "list": [
       {
-        "pagePath": "pages/ai/index",
+        "pagePath": "pages/index/index",
         "text": "识别",
         "iconPath": "images/icon_ai_default.png",
         "selectedIconPath": "images/icon_ai.png"
@@ -31,11 +31,14 @@
         "text": "分类",
         "iconPath": "images/icon_sort_default.png",
         "selectedIconPath": "images/icon_sort.png"
+      },
+      {
+        "pagePath": "pages/guide/guide",
+        "text": "指南",
+        "iconPath": "images/icon_sort_default.png",
+        "selectedIconPath": "images/icon_sort.png"
       }
     ]
   },
-  "sitemapLocation": "sitemap.json",
-  "navigateToMiniProgramAppIdList": [
-    "wx17128b374eab7c51"
-  ]
+  "sitemapLocation": "sitemap.json"
 }

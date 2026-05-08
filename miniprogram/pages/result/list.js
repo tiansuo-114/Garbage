@@ -90,7 +90,7 @@ Page({
   },
   onGoHome:function(){
     wx.switchTab({
-      url: '/pages/ai/index',
+      url: '/pages/index/index',
     })
   },
   commit: function () {
