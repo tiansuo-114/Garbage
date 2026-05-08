@@ -35,7 +35,7 @@
 
 ## 录屏链接
 
-> 待补充
+[点击下载演示录屏 demo.mp4](https://github.com/tiansuo-114/Garbage/releases/download/v1.0.0/demo.mp4)
 
 ## 自我总结
 
