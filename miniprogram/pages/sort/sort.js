@@ -12,7 +12,7 @@ Page({
   },
   goSearch: function () {
     wx.navigateTo({
-      url: '/pages/ai/search',
+      url: '/pages/index/search',
     })
   },
   onClick:function(e){
@@ -34,7 +34,7 @@ Page({
         break;
     }
     wx.navigateTo({
-      url: '/pages/ai/filter/filter?type=' + indexClick,
+      url: '/pages/index/filter/filter?type=' + indexClick,
     })
   }
 })
