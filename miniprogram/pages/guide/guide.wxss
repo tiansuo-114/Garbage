@@ -1,0 +1,182 @@
+.guide-container {
+  padding-bottom: 40rpx;
+  background-color: #f6f6f6;
+  min-height: 100vh;
+}
+
+/* 页面头部 */
+.page-header {
+  background: linear-gradient(135deg, #00cc77, #00b36b);
+  padding: 40rpx 30rpx 50rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.page-title {
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10rpx;
+}
+.page-subtitle {
+  font-size: 26rpx;
+  color: rgba(255,255,255,0.8);
+}
+
+/* Tab 栏 */
+.tab-bar {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  padding: 20rpx 0 0;
+  box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.05);
+}
+.tab-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16rpx 0;
+  position: relative;
+}
+.tab-icon {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 12rpx;
+  margin-bottom: 8rpx;
+}
+.tab-text {
+  font-size: 22rpx;
+  color: #999;
+}
+.tab-active .tab-text {
+  font-weight: bold;
+}
+.tab-indicator {
+  position: absolute;
+  bottom: 0;
+  width: 50rpx;
+  height: 6rpx;
+  border-radius: 3rpx;
+}
+
+/* 详情卡片 */
+.detail-card {
+  margin: 30rpx 24rpx 0;
+  padding: 30rpx;
+  border-radius: 16rpx;
+  box-shadow: 0 4rpx 16rpx rgba(0,0,0,0.06);
+}
+.card-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+.card-icon {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 16rpx;
+  margin-right: 24rpx;
+}
+.card-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.card-name {
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-bottom: 8rpx;
+}
+.card-desc {
+  font-size: 24rpx;
+  color: #666;
+  line-height: 1.5;
+}
+.card-items {
+  background-color: rgba(255,255,255,0.6);
+  border-radius: 12rpx;
+  padding: 20rpx;
+}
+.items-label {
+  font-size: 24rpx;
+  font-weight: bold;
+  color: #333;
+}
+.items-text {
+  font-size: 24rpx;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* 区块标题 */
+.section {
+  margin: 24rpx 24rpx 0;
+  background-color: #fff;
+  border-radius: 16rpx;
+  padding: 30rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.04);
+}
+.section-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 24rpx;
+}
+.section-icon {
+  margin-right: 12rpx;
+  font-size: 32rpx;
+}
+
+/* 技巧列表 */
+.tip-list {
+  display: flex;
+  flex-direction: column;
+}
+.tip-item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-bottom: 20rpx;
+}
+.tip-item:last-child {
+  margin-bottom: 0;
+}
+.tip-dot {
+  width: 14rpx;
+  height: 14rpx;
+  border-radius: 50%;
+  margin-top: 12rpx;
+  margin-right: 16rpx;
+  flex-shrink: 0;
+}
+.tip-text {
+  font-size: 26rpx;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* 误区列表 */
+.mistake-list {
+  display: flex;
+  flex-direction: column;
+}
+.mistake-item {
+  background-color: #fff7f0;
+  border-radius: 12rpx;
+  padding: 20rpx;
+  margin-bottom: 16rpx;
+  border: 1rpx solid #ffe4cc;
+}
+.mistake-item:last-child {
+  margin-bottom: 0;
+}
+.mistake-text {
+  font-size: 26rpx;
+  color: #555;
+  line-height: 1.6;
+}
