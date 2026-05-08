@@ -5,7 +5,6 @@
     "pages/index/search",
     "pages/index/filter/filter",
     "pages/android/qa",
-    "pages/index/index",
     "pages/sort/sort",
     "pages/guide/guide",
     "pages/result/gan",
